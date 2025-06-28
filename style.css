@@ -1,0 +1,273 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Header styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+  background-image: url('https://cdn.pixabay.com/photo/2015/04/15/01/28/background-723053_1280.jpg');
+  background-size: cover;
+  background-position: center top;
+  height: 400px;
+  color: black;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+}
+
+nav a:hover {
+  color: red;
+}
+
+.carousel {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.carousel img {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Footer styling */
+footer {
+  background-image: url('https://cdn.pixabay.com/photo/2015/04/15/01/28/background-723053_1280.jpg');
+  background-size: cover;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  bottom: 0;
+  padding: 20px;
+  color: black;
+}
+
+footer a {
+  color: black;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+footer a:hover {
+  color: red;
+}
+
+/* Section styles */
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+
+}
+
+.one {
+  font-size: 20px;
+  color: darkslategrey;
+  text-align: center;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: ghostwhite;
+  background-image: url('https://img.freepik.com/free-vector/beautiful-decorative-soft-colorful-watercolor-texture-background_1055-16826.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .one {
+    text-align: center;
+  }
+
+  .carousel {
+    width: 100%;
+
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .one {
+    padding: 40px;
+  }
+
+  .carousel {
+    width: 90%;
+  }
+}
+
+.category-item {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 300px;
+  height: 200px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.category-item h3 {
+  margin: 0;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  text-align: center;
+}
+
+.category-item:hover {
+  transform: scale(1.05);
+}
+
+/* Individual category pages styling */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin: 0;
+}
+
+.category-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.category-images img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.category-images img:hover {
+  transform: scale(1.05);
+}
+
+/* About page styling */
+.container {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+}
+
+.container img {
+  width: 700px;
+  height: 700px;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.container p {
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 0;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .categories {
+    flex-direction: column;
+  }
+
+  .category-item {
+    width: 100%;
+  }
+
+  .hero {
+    height: 200px;
+  }
+
+  .category-images img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .category-images img {
+    width: 45%;
+  }
+}
+
+footer {
+  background-image: url('https://cdn.pixabay.com/photo/2015/04/15/01/28/background-723053_1280.jpg');
+  background-size: cover;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  color: white;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
